@@ -37,6 +37,7 @@ Each PDF generates a `<filename>.json` like this:
     { "level": "H3", "text": "History of AI", "page": 3 }
   ]
 }
+```
 
 ⚙️ How It Works
 PDF is parsed using pdfminer.six
