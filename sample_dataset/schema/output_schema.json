@@ -1,0 +1,10 @@
+{
+  "document_name": "string",
+  "structure": [
+    {
+      "text": "string",
+      "level": "integer (1-3)",
+      "page_number": "integer"
+    }
+  ]
+}

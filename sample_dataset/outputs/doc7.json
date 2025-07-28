@@ -1,0 +1,210 @@
+{
+  "title": "AI in Spacecraft Health Maintenance",
+  "outline": [
+    {
+      "text": "Section 1 : Title of Research Proposal Section 2 : Summary :",
+      "level": "H3",
+      "page": 1
+    },
+    {
+      "text": "Optimization of AI Models for Real-time Anomaly Detection in Spacecraft Telemetry Under Resource Constraints",
+      "level": "H3",
+      "page": 1
+    },
+    {
+      "text": "Space missions depend significantly on real-time telemetry data to assess the health and performance of spacecraft. Given the intricate and crucial nature of these missions, any irregularity in the telemetry data can lead to serious repercussions, potentially threatening the success of the mission. Conventional anomaly detection methods usually necessitate extensive analysis on the ground, which may not be practical for deep space missions due to communication delays and restricted bandwidth. Furthermore, in human space missions where rapid decisions are required, AI tools can assist astronauts in analyzing and drawing relevant conclusions from onboard telemetry data. Additionally, the computational resources available on spacecraft are limited, creating hurdles for implementing advanced anomaly detection algorithms. Consequently, there is an urgent need to create an AI model that can effectively monitor telemetry data, identify anomalies in real-time, and function within the strict limitations of onboard computational capabilities. ●  Currently, ISRO uses rule-based threshold monitoring (e.g., an alert if battery voltage < 3.6V) ●  This leads to false alarms or misses slow-developing failures (e.g., gradual temperature rise). ●  AI can learn patterns in telemetry data and predict failures before they occur, and prevent minor errors from leading to catastrophic ones, increasing chances of mission success",
+      "level": "H3",
+      "page": 1
+    },
+    {
+      "text": "Problem Statements :",
+      "level": "H3",
+      "page": 1
+    },
+    {
+      "text": "Section 3 : Objectives Section 4 : Major Scientific fields of interest",
+      "level": "H3",
+      "page": 2
+    },
+    {
+      "text": "● 1.  NASA’s Health Monitoring AI",
+      "level": "H3",
+      "page": 2
+    },
+    {
+      "text": "Develop an AI-based anomaly detection system optimized for real-time telemetry",
+      "level": "H3",
+      "page": 2
+    },
+    {
+      "text": "monitoring onboard spacecraft, specifically addressing the challenges of computational constraints in space mission environments. ●  Reduce computational complexity and model size while maintaining high detection accuracy, focusing on lightweight AI programming techniques such as pruning, quantization, and knowledge distillation. ●  Enhance spacecraft autonomy by minimizing reliance on ground-based monitoring and enabling real-time decision-making despite limited onboard resources. ●  Implement and test the AI model on embedded hardware, simulating the resource-constrained environments typical in space missions. ●  Contribute to ISRO’s advancements in autonomous spacecraft operations, ensuring more efficient, safe, and sustainable space missions, especially in deep-space and human spaceflight missions. ISRO currently relies on predefined thresholds and expert-driven analysis for telemetry monitoring. This has three major limitations: 1.  Limited Prediction Capabilities: Cannot foresee failures in advance, leading to reactive maintenance rather than proactive intervention. 2.  Data Overload: Continuous telemetry transmission overloads ground-based data processing centers. 3.  Lack of Real-Time Autonomy: Reliance on Earth-based monitoring increases decision-making delays, which is problematic for deep-space missions like Chandrayaan, Mangalyaan, and future Gaganyaan missions. 4.  In past missions, unexpected temperature fluctuations in spacecraft components have led to system malfunctions. A lightweight AI model could predict temperature anomalies in advance and suggest corrective actions, preventing component damage. ●  NASA has implemented Deep Learning for telemetry data analysis in its Remote Agent Experiment (RAX).",
+      "level": "H3",
+      "page": 2
+    },
+    {
+      "text": "1.  Limitations of ISRO’s Current Approach 2.   Review of Current Work in the Field",
+      "level": "H3",
+      "page": 2
+    },
+    {
+      "text": "2. ESA’s Phi-Sat-1 AI System",
+      "level": "H3",
+      "page": 3
+    },
+    {
+      "text": "3. D-Orbit’s RaVAEn Model 4. AIKO’s Onboard AI:",
+      "level": "H3",
+      "page": 3
+    },
+    {
+      "text": "Accelerator for on Board Data Processing and Satellite Autonomy. In: Ieracitano, C., Mammone, N., Di Clemente, M., Mahmud, M., Furfaro, R., Morabito, F.C. (eds) The Use of Artificial Intelligence for Space Applications. AII 2022. Studies in Computational Intelligence, vol 1088. Springer, Cham. https://doi.org/10.1007/978-3-031-25755-1_3 ●  SpaceX has experimented with neural networks for Falcon 9 telemetry analysis ●  Blue Origin integrates edge AI models for real-time monitoring of launch vehicle parameters. Key Innovations 1.  Use of Pruned and Quantized LSTM Networks ○  Reduces model size and computation needs. 2.  Deployment on Low-Power Edge AI Hardware ○  Uses FPGAs or Intel Movidius VPUs instead of GPUs. 3.  Adaptive Learning System ○  Ground-based AI periodically updates onboard models to improve accuracy. Expected Impact for ISRO ●  Early Failure Prediction → Reduces spacecraft downtime. ●  Lower Bandwidth Needs → Optimized telemetry transmission. ●  Autonomous Decision Making → Reduces manual intervention. The system consists of two key components: ●  Objective: Detect real-time anomalies using a lightweight LSTM model optimized for low-power hardware. ●  Hardware: Runs on an FPGA, Movidius VPU, or ARM Cortex AI chip.",
+      "level": "H3",
+      "page": 4
+    },
+    {
+      "text": "5. Private Sector: SpaceX and Blue Origin",
+      "level": "H3",
+      "page": 4
+    },
+    {
+      "text": "3.  Key takeaways of the Proposed research 1. System Architecture :",
+      "level": "H3",
+      "page": 4
+    },
+    {
+      "text": "Section 5 : Approach",
+      "level": "H3",
+      "page": 4
+    },
+    {
+      "text": "A. Onboard AI (Edge Processing)",
+      "level": "H3",
+      "page": 4
+    },
+    {
+      "text": "●  AI Model: Compressed LSTM model trained to predict future telemetry values based on historical data. ●  Data Processing: ○  Continuously receives real-time telemetry data from sensors. ○  Predicts next telemetry values based on past trends. ○ If predicted vs actual deviation exceeds threshold, flag as anomaly. ●  Action: ○ ○ If anomaly is critical → Immediate alert to ground station. If anomaly is minor → Store data for periodic analysis. ●  NOTE - Alternatively, a Lightweight recurrent network may be used since these are designed specifically for constrained environments with lower computational needs., however these are also known to sacrifice some accuracy for efficiency. ●  Objective: Analyze telemetry patterns in-depth and send improved AI model updates to spacecraft. ●  Hardware: High-performance server-based GPUs (e.g., NVIDIA A100). ●  AI Model: Full-sized LSTM trained on large datasets from multiple past missions. ●  Data Processing: ○  Receives flagged anomalies from onboard AI. ○  Reanalyzes data using more complex ML models (e.g., Transformer-based forecasting). ○  Sends periodic model updates to the spacecraft for better anomaly detection. The AI model must be both accurate and lightweight for real-time use. ●  Since spacecraft telemetry is time-series data, a Long Short-Term Memory (LSTM) network is a great fit because it: ○  Learns long-term dependencies in telemetry. ○  Works well with fluctuating sensor readings. ○  Can predict future values for proactive issue detection.",
+      "level": "H3",
+      "page": 5
+    },
+    {
+      "text": "B. Ground-Based AI (Deep Analysis & Model Updating)",
+      "level": "H3",
+      "page": 5
+    },
+    {
+      "text": "2. AI Model Selection and Optimization :",
+      "level": "H3",
+      "page": 5
+    },
+    {
+      "text": "Step 1: Choosing a Base Model",
+      "level": "H3",
+      "page": 5
+    },
+    {
+      "text": "Step 2 : Optimizing the LSTM for Spacecraft Hardware Step 3: Model Deployment Strategy",
+      "level": "H3",
+      "page": 6
+    },
+    {
+      "text": "Optimization Technique  Purpose Expected Improvement Pruning Remove unimportant neurons 50% smaller model Quantization (FP32 → INT8) Convert floating-point to integer 75% lower memory use Knowledge Distillation Train a small model from a large one Maintain accuracy with 90% fewer computations Onboard Edge Computing  Deploy on 10x faster inference FPGA/Movidius instead of CPU ●  Onboard LSTM Model : 10% of full AI size, running on FPGA. ●  Ground-Based LSTM : Full model for deeper anomaly analysis. ●  Model Updates : Every 3 months, the ground station trains an improved model and uploads it to the spacecraft. 1.  Telemetry Sensors Collect Data ○  Example: Battery voltage, temperature, current, pressure, radiation levels. 2.  Preprocessing ○  Normalize values (0-1 range). ○  Remove outliers using statistical filters. 3.  LSTM Model Predicts Next Values ○  Given the past 10 minutes of telemetry, predict the next 5 minutes. 4.  Anomaly Detection Algorithm ○ If predicted value deviates from actual by 3σ, flag as anomaly. 5.  Decision Making",
+      "level": "H3",
+      "page": 6
+    },
+    {
+      "text": "3. Data Processing Pipeline :",
+      "level": "H3",
+      "page": 6
+    },
+    {
+      "text": "A. Onboard Processing Flow",
+      "level": "H3",
+      "page": 6
+    },
+    {
+      "text": "○ ○ If critical anomaly, send an immediate alert to the ground station. If non-critical, log the data and continue monitoring. 1.  Receives Flagged Anomalies from spacecraft. 2.  Performs Detailed ML Analysis using full-scale LSTM & transformers. 3.  Updates AI Model and Sends to Spacecraft every 3 months. Recommendation: ●  Use FPGA for onboard inference (balance of speed + power efficiency). ●  Use Intel Movidius VPU if ISRO wants to add image processing (e.g., Phi-Sat-1). ●  Use ARM Cortex AI chip for low-power CubeSats & SmallSats. ●  Data Collection ○  Spacecraft sensors record battery voltage, temperature, pressure, power usage, etc. ○  Data is fed into an LSTM-based AI model onboard. ●  AI Anomaly Detection (Onboard) ○  AI compares real-time telemetry values with expected trends. ○ If deviation > threshold, an alert is generated. ●  Prediction & Action ○  AI predicts future failures (e.g., battery overheating in 6 hours).",
+      "level": "H3",
+      "page": 7
+    },
+    {
+      "text": "B. Ground Processing Flow",
+      "level": "H3",
+      "page": 7
+    },
+    {
+      "text": "4. Hardware Selection : 5. Example workflow :",
+      "level": "H3",
+      "page": 7
+    },
+    {
+      "text": "Hardware Use case Power Consumption AI Performance FPGA (Xilinx Zynq) Real-time AI on satellites < 5W Medium Intel Movidius VPU Image + telemetry processing 1 - 2W High ARM Cortex AI chip Lightweight telemetry AI 0.5 - 1W Low",
+      "level": "H3",
+      "page": 7
+    },
+    {
+      "text": "○  Preemptive action: The system may suggest reducing power usage or switching to backup batteries. ●  Data Transmission ○  Only important telemetry data is sent to ground stations, reducing communication bandwidth. A time period of 2 years will be divided into 4 phases, which will then be further subdivided into subphases.",
+      "level": "H3",
+      "page": 8
+    },
+    {
+      "text": "6. Work plan :",
+      "level": "H3",
+      "page": 8
+    },
+    {
+      "text": "1.  Phase 1 (Months 1-4): Data Collection and Preprocessing - a.  Data comprehension and understanding (Month 1 - 2) - Learning to understand and work with Telemetry Data provided by ISRO. 2.  Phase 2 (Months 5-10): Algorithm Development - a.  Model Comprehension (Month 5 - 7) - Experimenting with Various AI models such as Random Forest, Support Vector Machines, and Neural Networks for fault detection and prediction. b.  Model Implementation (month 8 - 10) 3.  Phase 3 (Months 11-16): Model Testing and Refinement improve accuracy. (Month 11-13) b.  Fine tuning models based on results from the Simulations. (Month 14 - 16) 4.  Phase 4 (Months 17-24): Deployment and Integration performance. Gantt Chart - Project_ISRO",
+      "level": "H3",
+      "page": 8
+    },
+    {
+      "text": "b.  Clean, preprocess, and organize the data for training AI models.",
+      "level": "H3",
+      "page": 8
+    },
+    {
+      "text": "a.  Validate models through simulation and adjust parameters to b.  Test the model in real-time conditions and refine based on",
+      "level": "H3",
+      "page": 8
+    },
+    {
+      "text": "a.  Integrate the system with spacecraft telemetry.",
+      "level": "H3",
+      "page": 8
+    },
+    {
+      "text": "7. Hardware Requirements",
+      "level": "H3",
+      "page": 9
+    },
+    {
+      "text": "○  Microcontroller or Microprocessor: Space-qualified, low-power processor with AI/ML acceleration capabilities (e.g., NVIDIA Jetson, Xilinx Zynq, or radiation-hardened processors). ○  Sensors: To monitor key subsystems (temperature, pressure, voltage, etc.). ○  Memory and Storage: Use radiation-hardened memory for data logging and model storage. ○  Communication Interfaces: Ensure reliable data transfer to ground stations or other spacecraft. -  During Phase 1, the data collection phase, historical data from power sensors and thermal systems is required, to process it and begin AI development later down the road. -  To effectively train the model, we need historical telemetry logs that contain both nominal (normal operation) and anomalous (faulty) data. -  Core Telemetry Parameters - Subsystem Telemetry Parameter Importance Power System Battery voltage, current, state-of-charge (SOC), solar panel output, power consumption Detects power failures, low battery, or solar panel degradation. Thermal Control Component temperatures, heat dissipation rate, heater status Predicts overheating or thermal regulation failure. Propulsion System Fuel levels, pressure, thrust levels, valve status Detects leaks, engine malfunctions. Communication Signal strength, antenna status, transmission power Attitude Control Gyroscope readings, accelerometer data, magnetometer data Radiation Sensors Radiation levels (cosmic rays, solar storms) Identifies signal dropouts or antenna misalignment. Detects spacecraft orientation issues. Predicts radiation-induced anomalies.",
+      "level": "H3",
+      "page": 9
+    },
+    {
+      "text": "Section 6 :  Data reduction and analysis",
+      "level": "H3",
+      "page": 9
+    },
+    {
+      "text": "-  Anomaly Labels (Supervised Learning)",
+      "level": "H3",
+      "page": 10
+    },
+    {
+      "text": "Ideally, historical data should have labeled anomalies, such as: - Battery degradation event (e.g., sudden voltage drop). - Overheating of payload electronics (e.g., thermal sensor spike). - Telemetry dropout (e.g., missing data packets). If labels are unavailable, we can use unsupervised learning (e.g., autoencoders, clustering) to detect deviations from normal telemetry patterns. Budget Requirement (INR, Estimated): Item Salary (Research Assistants, Engineers) Equipment (Embedded systems, sensors, computing hardware) Consumables (Data storage, software licenses) Contingencies Travel (ISRO meetings, conferences) Other Expenses (Cloud computing, AI software tools) Sub Total Institute Overhead (20%) Total Budget Year 1 (INR) 2,40,000 Year 2 (INR) 2,40,000 Total (INR) 5,00,000 1.  S. K. Ibrahim, A. Ahmed, M. A. E. Zeidan and I. E. Ziedan, \"Machine Learning Methods for Spacecraft Telemetry Mining,\" in IEEE Transactions on Aerospace and Electronic Systems, vol. 55, no. 4, pp. 1816-1827, Aug. 2019,",
+      "level": "H3",
+      "page": 10
+    },
+    {
+      "text": "Section 7 :  Available Institutional facilities : Section 9 : References and additional Citations",
+      "level": "H3",
+      "page": 10
+    },
+    {
+      "text": "Section 8 : Fund requirement :",
+      "level": "H3",
+      "page": 10
+    }
+  ]
+}

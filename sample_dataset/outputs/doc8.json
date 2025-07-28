@@ -1,0 +1,280 @@
+{
+  "title": "Page No Remarks Experiments Serial Number 1 2 3 4 5 Introduction to Cloud Computing Installation of virtual box Installation of ubuntu on virtual box Configuration of DHCP Server in Cisco Packet Tracer Configuration of Web Server and DNS server in Cisco Packet Tracer Configuration of WAN network in Cisco Packet Tracer Configuration of email server Configuration of FTP Server 6 7 8 9 10 11",
+  "outline": [
+    {
+      "text": "Experiment 1- Introduction to Cloud Computing Cloud Computing Types of Cloud Computing",
+      "level": "H3",
+      "page": 3
+    },
+    {
+      "text": "Cloud Computing means storing and accessing data and programs on remote servers on the internet instead of local storage (i.e our computer). Cloud Computing is also referred to as Internet- based computing. In this data is stored over the internet. The data that is stored can be files, images, documents etc. The following are some of the operations that can be performed with Cloud Computing- Storage, backup, and recovery of data Delivery of software on demand Development of new applications and services Streaming videos and audio 1. Infrastructure as a Service ( IaaS )- It is a cloud computing model that provides virtualized hardware like servers, storage, and networks over the internet. It allows businesses to rent infrastructure on a pay-as-you-go basis, eliminating the need to buy and maintain physical hardware. IaaS is highly scalable, flexible, and cost-effective, making it ideal for hosting websites, running applications, and creating development environments. platform for developers to build, deploy, and manage applications without worrying about the underlying infrastructure. It includes tools, frameworks, and services for application development, databases, and testing, all accessible over the internet. PaaS is scalable, cost-efficient, and simplifies the development process.",
+      "level": "H3",
+      "page": 3
+    },
+    {
+      "text": "2. Platform as a Service ( PaaS )- It is a cloud computing model that provides a",
+      "level": "H3",
+      "page": 3
+    },
+    {
+      "text": "3. SaaS (software as a service)- It is a cloud computing model that delivers 4. Function as a Service (FaaS)- It is a cloud computing model where",
+      "level": "H3",
+      "page": 4
+    },
+    {
+      "text": "software applications over the internet. Users can access these applications through a web browser without needing to install or maintain them. SaaS is subscription-based, scalable, and managed by the provider, making it easy for businesses and individuals to use. developers run individual functions or pieces of code in response to events without managing servers. It enables a serverless architecture, automatically scaling resources based on demand and charging only for the execution time of the code. FaaS simplifies development, reduces costs, and is ideal for microservices or event-driven applications. An IP address (Internet Protocol address) is a unique numerical label assigned to each device connected to a computer network that uses the Internet Protocol for communication. It acts as an identifier, enabling devices to locate and communicate with each other over the internet. Types of IP Addresses: 1.  IPv4: A 32-bit address format (e.g., 192.168.1.1). 2.  IPv6: A 128-bit address format designed to replace IPv4 (e.g., 2001:0db8:85a3:0000:0000:8a2e:0370:7334). Class A- 1-126 //Big Companies Class B- 128-191 //Mid Companies Class C- 192-223 //Small Companies Class D- 224-239 //Reserved Class E- 240-255 //Reserved",
+      "level": "H3",
+      "page": 4
+    },
+    {
+      "text": "Subnet mask Gateway DNS (Domain Name System)",
+      "level": "H3",
+      "page": 5
+    },
+    {
+      "text": "A subnet mask is used in conjunction with an IP address to divide a network into subnets and identify the network and host portions of the address. It helps routers and devices understand how to route data within a network or across networks. Class      Default Subnet Mask      CIDR Notation        Network/Host Bits Class A    255.0.0.0                           /8                          8 bits network, 24 bits host Class B     255.255.0.0                     /16                        16 bits network, 16 bits host Class C     255.255.255.0                /24                         24 bits network, 8 bits host A gateway is a device that connects different networks, allowing data to flow between them. It routes data from a local network to an external one, like the internet. In home networks, a router often acts as the gateway, forwarding data requests from devices to the internet. Gateways help manage traffic and DNS is a system that translates human-readable domain names into IP addresses that computers use to identify each other on the internet. It acts like a phonebook for the internet, allowing users to access websites using easy-to-remember names instead of numerical IP addresses. When you enter a website's domain name, DNS servers find the corresponding IP address and direct your browser to the correct site.",
+      "level": "H3",
+      "page": 5
+    },
+    {
+      "text": "ensure secure communication between networks.",
+      "level": "H3",
+      "page": 5
+    },
+    {
+      "text": "DHCP (Dynamic Host Configuration Protocol)",
+      "level": "H3",
+      "page": 6
+    },
+    {
+      "text": "DHCP is a network protocol used to automatically assign IP addresses and other network configuration settings (like subnet mask, gateway, and DNS) to devices on a network. This eliminates the need for manual configuration of IP addresses on each device. When a device connects to the network, the DHCP server assigns it an available IP address from a predefined range, making network management easier and more efficient. Cmd commands 1.  To find IP Address Window +r ---> tracert www.google.com 2.  Check IP Address of system IPconfig/all 3.  Open pen drive and find data on the drive Attrib –s –h –r /s ./d",
+      "level": "H3",
+      "page": 6
+    },
+    {
+      "text": "Experiment 2- Installation of Virtual Box",
+      "level": "H3",
+      "page": 7
+    },
+    {
+      "text": "Step 1: Go to the official site virtualbox.org and download the latest version for windows. Step 2: After downloading open the file Step 3: Select Installation Location",
+      "level": "H3",
+      "page": 7
+    },
+    {
+      "text": "Step 4: Creating Entries and Shortcuts Step 5: Click on install Step 6: Installing Files and packages",
+      "level": "H3",
+      "page": 8
+    },
+    {
+      "text": "Step 7: Finish installation Step 8: Open virtual box",
+      "level": "H3",
+      "page": 9
+    },
+    {
+      "text": "Experiment 3- Installation of Ubuntu on Virtual Box",
+      "level": "H3",
+      "page": 11
+    },
+    {
+      "text": "Step 1: Download ISO for Ubuntu which are available on the ubuntu.com. Step 2: Open VirtualBox and click on the New button. Give a Name to your Virtual Machine and select the Location for it to install. Step 3: Assign RAM size, create virtual hard disk and select the type of hard disk to be used. Step 4: Either of the Physical Storage types can be selected. Using a Dynamically Allocated Disk is by default recommended.",
+      "level": "H3",
+      "page": 11
+    },
+    {
+      "text": "Step 5: Select Disk Size and provide the Destination Folder to install. Step 6: Begin installing ubuntu. Click on the Install Ubuntu option Step 7: Select the keyboard, time zone, name of the computer and password and other login information.",
+      "level": "H3",
+      "page": 12
+    },
+    {
+      "text": "Step 8: Once the installation process is over, reboot your Virtual Machine. Step 9: The installation process is complete.",
+      "level": "H3",
+      "page": 14
+    },
+    {
+      "text": "Experiment 4- Configuration of DHCP Server in Cisco Packet Tracer",
+      "level": "H3",
+      "page": 15
+    },
+    {
+      "text": "Step 1: Open Cisco packet tracer Step 2: From the bottom left corner select Network devices Step 3: Select a router and a switch and place them on the screen Step 4: From the bottom left corner select end devices and add PC0, PC1, PC2 and Server on the screen",
+      "level": "H3",
+      "page": 15
+    },
+    {
+      "text": "Fig 1 Fig 2 Fig 3",
+      "level": "H3",
+      "page": 15
+    },
+    {
+      "text": "Step 5: Click on the connections option to connect the devices using copper straight wire. 1)  Click on the device 2)  Choose fastethernet0 3)  Click on the switch 4)  Choose fastetherner0/1 5)  The two devices are connected Repeat the same step for all the other devices as shown- Step 6: Colour of cable interface between switch and router is red because router is not turned on. In CPT router is by default switched off. Now to turn on router- ●  Click on router ●  Go to CLI section ●  In last type, no enable configure terminal interface Fa0/0 ip add 10.0.0.1 255.0.0.0 no shutdown We will observe that the status of the router changes from red to green.",
+      "level": "H3",
+      "page": 16
+    },
+    {
+      "text": "Step 7: Provide gateway and DNS server to Server (Static). Step 8: Give IP address to the pc’s via DHCP Step 9: Click on router ●  Go to CLI section ●  ip dhcp pool amity ●  network 10.0.0.0 255.0.0.0 ●  default-router 10.0.0.1 ●  dns-server 10.0.0.2",
+      "level": "H3",
+      "page": 17
+    },
+    {
+      "text": "Fig 5 Fig 6 Fig 7",
+      "level": "H3",
+      "page": 17
+    },
+    {
+      "text": "Step 10: Check the status to see if the connection is successful",
+      "level": "H3",
+      "page": 18
+    },
+    {
+      "text": "Fig 8 Fig 9",
+      "level": "H3",
+      "page": 18
+    },
+    {
+      "text": "Experiment 5- Configuration of Web Server and DNS server in Cisco Packet Tracer",
+      "level": "H3",
+      "page": 19
+    },
+    {
+      "text": "Step 1: Open Cisco packet tracer Step 2: From the bottom left corner select Network devices Step 3: Select a switch, a few pcs and some servers and place them on the screen Step 4: Click on the connections option to connect the devices using copper straight wire. 1)  Click on the device 2)  Choose fastethernet0 3)  Click on the switch 4)  Choose fastetherner0/1 5)  The two devices are connected Repeat the same step for all the other devices as shown-",
+      "level": "H3",
+      "page": 19
+    },
+    {
+      "text": "Fig 1 Fig 2",
+      "level": "H3",
+      "page": 19
+    },
+    {
+      "text": "Step 5: Give Ip addresses to the devices Click on the device Desktop Ip configuration Give Ip address, subnet mask, default gateway and DNS server Step 6: The IP addresses assigned are as below",
+      "level": "H3",
+      "page": 20
+    },
+    {
+      "text": "Fig 3 Fig 4",
+      "level": "H3",
+      "page": 20
+    },
+    {
+      "text": "Fig 5 Fig 6",
+      "level": "H3",
+      "page": 21
+    },
+    {
+      "text": "Fig 7 Fig 8",
+      "level": "H3",
+      "page": 22
+    },
+    {
+      "text": "Step 9: Next, we will connect DNS server Services DNS Turn it on Write the name and the corresponding Ip address Add the corresponding address Step 10: Click on any Pc desktop Web browser Instead of IP address we can use the name of the website.",
+      "level": "H3",
+      "page": 22
+    },
+    {
+      "text": "Experiment 6- Configuration of WAN network in Cisco Packet Tracer",
+      "level": "H3",
+      "page": 24
+    },
+    {
+      "text": "Step 1: Continue from the previous experiment and make another network and configure Ip addresses as done before. Step 2: Give the IP address as 30.0.0.1 and default gateway as the same which you would give to the router. Step 3: Click on the router Power off the Router Select HWIC-2T Drag and drop to the routers empty slot Turn on the router",
+      "level": "H3",
+      "page": 24
+    },
+    {
+      "text": "Fig 1 Fig 2",
+      "level": "H3",
+      "page": 24
+    },
+    {
+      "text": "Step 4: Repeat the same for the next router Step 5: Click on the router no enable configure terminal interface Fa0/1 ip address 10.0.0.6 255.0.0.0 no shutdown no enable configure terminal interface Fa0/1 ip address 30.0.0.3 255.0.0.0",
+      "level": "H3",
+      "page": 25
+    },
+    {
+      "text": "Fig 3 Fig 4",
+      "level": "H3",
+      "page": 25
+    },
+    {
+      "text": "Step 6: Repeat the same steps for 2nd router",
+      "level": "H3",
+      "page": 25
+    },
+    {
+      "text": "no shutdown Step 7: Select serial port for WAN Static Routing Step 8: Click on router En config terminal interface Se0/3/0 ip address 20.0.0.2 255.0.0.0 no shutdown Step 9: As there is a clock sign so we use the following commands- Clock rate 64000",
+      "level": "H3",
+      "page": 26
+    },
+    {
+      "text": "Fig 5 Fig 6 Fig 7",
+      "level": "H3",
+      "page": 26
+    },
+    {
+      "text": "repeat the same for 2nd router",
+      "level": "H3",
+      "page": 26
+    },
+    {
+      "text": "Step 10: Now we are to perform rip(routing information protocol) routing For router0 we have network 10.0.0.0 and 20.0.0.0. We will use the following commands- router rip net 10.0.0.0 net 20.0.0.0 Repeat the same step for the other network. Step 11: Check the status to see if the connection is successful",
+      "level": "H3",
+      "page": 27
+    },
+    {
+      "text": "Fig 8 Fig 9",
+      "level": "H3",
+      "page": 27
+    },
+    {
+      "text": "Experiment 7- Configuration of email server",
+      "level": "H3",
+      "page": 28
+    },
+    {
+      "text": "Step 1:  Open Cisco packet tracer Step 2: From the bottom left corner select Network devices Step 3: Select a switch, a few pcs and some servers and place them on the screen Step 4: Go to server, to service, email, set the domain, add emails to it with user and password.",
+      "level": "H3",
+      "page": 28
+    },
+    {
+      "text": "Fig 1 Fig 2",
+      "level": "H3",
+      "page": 28
+    },
+    {
+      "text": "Fig 3 Fig 4 Fig 5",
+      "level": "H3",
+      "page": 29
+    },
+    {
+      "text": "Step 5: Go to any pc, desktop and email configure. Add the username and email address created. Add server information and logon information. Repeat the same step for pc1 and make another username. Step 6: Compose the mail and send to the other user Step 7: Now click on pc1, desktop, email, receive. We will observe that the email is there.",
+      "level": "H3",
+      "page": 29
+    },
+    {
+      "text": "Experiment 8- Configuration of FTP server",
+      "level": "H3",
+      "page": 30
+    },
+    {
+      "text": "Fig 6 Fig 1 Fig 2",
+      "level": "H3",
+      "page": 30
+    },
+    {
+      "text": "Step 1:  Open Cisco packet tracer Step 2: From the bottom left corner select Network devices Step 3: Select a switch, a few pcs and some servers and place them on the screen Step 4: Go to server, Service, ftp and add User name , password , add",
+      "level": "H3",
+      "page": 30
+    },
+    {
+      "text": "Step 5: go to pc ●  Text editor ●  File save ●  Command prompt ●  Ping 10.0.0.4 ●  ftp 10.0.0.4 ●  Login ●  Put file name",
+      "level": "H3",
+      "page": 31
+    },
+    {
+      "text": "Fig 3 Fig 4",
+      "level": "H3",
+      "page": 31
+    }
+  ]
+}
