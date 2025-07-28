@@ -52,34 +52,43 @@ JSON output is created with title + structured outline
 
 🐳 Docker Setup
 🔨 Build the Docker Image
-Linux/macOS (offline-safe) -
+Linux/macOS (offline-safe)
 
+bash
+Copy
+Edit
 docker build --platform linux/amd64 -t documind-1a .
+Windows PowerShell (verified)
 
-Windows PowerShell (verified) - 
-
+powershell
+Copy
+Edit
 docker build -t documind-1a .
-
 🚀 Run the Container
 Linux/macOS:
 
+bash
+Copy
+Edit
 docker run --rm \
   -v "$(pwd)/sample_dataset/pdfs:/app/input:ro" \
   -v "$(pwd)/sample_dataset/outputs:/app/output" \
   --network none \
   documind-1a
-
 Windows PowerShell:
 
-docker run --rm `
-  -v "${PWD}\sample_dataset\pdfs:/app/input:ro" `
-  -v "${PWD}\sample_dataset\outputs:/app/output" `
-  --network none `
+powershell
+Copy
+Edit
+docker run --rm ^
+  -v "${PWD}\sample_dataset\pdfs:/app/input:ro" ^
+  -v "${PWD}\sample_dataset\outputs:/app/output" ^
+  --network none ^
   documind-1a
-
-
 🏗️ Project Structure
-
+bash
+Copy
+Edit
 DocuMind_1a/
 ├── sample_dataset/
 │   ├── pdfs/              # 📥 Input PDFs
@@ -90,23 +99,26 @@ DocuMind_1a/
 ├── Dockerfile             # 🐳 Container setup
 └── README.md              # 📘 You are here
 
-
 📌 Constraints Met
-Constraint	            Status	  Details
-Max Runtime	             ✅	   ≤ 10s for 50-page PDF
-Model Size	             ✅	   No ML model used
-Internet Access	         ✅	   Offline only
-CPU-only, amd64 arch	 ✅	   Verified
-Output Format	         ✅	   Matches Adobe schema
-Multilingual Support	 ✅	   Japanese, Hindi, etc. supported
+Constraint	Status ✅	Details
+Max Runtime	✅	≤ 10s for 50-page PDF
+Model Size	✅	No ML model used
+Internet Access	✅	Offline only
+CPU-only, amd64 arch	✅	Verified
+Output Format	✅	Matches Adobe schema
+Multilingual Support	✅	Japanese, Hindi, etc. supported
 
 📚 Libraries Used
-
 pdfminer.six — Font & layout extraction
+
 Python 3.10
+
 No external APIs or ML models
 
 🔒 Notes
 No hardcoded logic or file-specific tuning
+
 Works on arbitrary PDFs
+
 Semantic filtering avoids noise, footers, copyrights
+
