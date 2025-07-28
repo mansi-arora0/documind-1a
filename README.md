@@ -39,56 +39,62 @@ Each PDF generates a `<filename>.json` like this:
 }
 ```
 
-⚙️ How It Works
-PDF is parsed using pdfminer.six
+## ⚙️ How It Works
+ - PDF is parsed using pdfminer.six
+ 
+ - Font size and layout info is extracted per page
+ 
+ - Top 3 font sizes are mapped to H1, H2, H3
+ 
+ - Smart rules filter valid headings (e.g. text length, noise, keywords)
+ 
+ - JSON output is created with title + structured outline
 
-Font size and layout info is extracted per page
+## 🐳 Docker Setup
 
-Top 3 font sizes are mapped to H1, H2, H3
+### 🔨 Build the Docker Image
 
-Smart rules filter valid headings (e.g. text length, noise, keywords)
+**Linux/macOS (offline-safe)**
 
-JSON output is created with title + structured outline
-
-🐳 Docker Setup
-🔨 Build the Docker Image
-Linux/macOS (offline-safe)
-
-bash
-Copy
-Edit
+```bash
 docker build --platform linux/amd64 -t documind-1a .
-Windows PowerShell (verified)
+```
 
-powershell
-Copy
-Edit
+**Windows PowerShell (verified)**
+
+```powershell
 docker build -t documind-1a .
-🚀 Run the Container
-Linux/macOS:
+```
 
-bash
-Copy
-Edit
+---
+
+### 🚀 Run the Container
+
+**Linux/macOS**
+
+```bash
 docker run --rm \
   -v "$(pwd)/sample_dataset/pdfs:/app/input:ro" \
   -v "$(pwd)/sample_dataset/outputs:/app/output" \
   --network none \
   documind-1a
-Windows PowerShell:
+```
 
-powershell
-Copy
-Edit
+**Windows PowerShell**
+
+```powershell
 docker run --rm ^
   -v "${PWD}\sample_dataset\pdfs:/app/input:ro" ^
   -v "${PWD}\sample_dataset\outputs:/app/output" ^
   --network none ^
   documind-1a
-🏗️ Project Structure
-bash
-Copy
-Edit
+```
+
+---
+
+### 🏗️ Project Structure
+
+```bash
 DocuMind_1a/
 ├── sample_dataset/
 │   ├── pdfs/              # 📥 Input PDFs
@@ -98,27 +104,33 @@ DocuMind_1a/
 ├── process_pdfs.py        # 🧠 Main logic for heading extraction
 ├── Dockerfile             # 🐳 Container setup
 └── README.md              # 📘 You are here
+```
 
-📌 Constraints Met
-Constraint	Status ✅	Details
-Max Runtime	✅	≤ 10s for 50-page PDF
-Model Size	✅	No ML model used
-Internet Access	✅	Offline only
-CPU-only, amd64 arch	✅	Verified
-Output Format	✅	Matches Adobe schema
-Multilingual Support	✅	Japanese, Hindi, etc. supported
+---
 
-📚 Libraries Used
-pdfminer.six — Font & layout extraction
+### 📌 Constraints Met
 
-Python 3.10
+| Constraint              | Status | Details                            |
+|-------------------------|--------|------------------------------------|
+| Max Runtime             | ✅     | ≤ 10s for 50-page PDF              |
+| Model Size              | ✅     | No ML model used                   |
+| Internet Access         | ✅     | Offline only                       |
+| CPU-only, amd64 arch    | ✅     | Verified                           |
+| Output Format           | ✅     | Matches Adobe schema               |
+| Multilingual Support    | ✅     | Japanese, Hindi, etc. supported    |
 
-No external APIs or ML models
+---
 
-🔒 Notes
-No hardcoded logic or file-specific tuning
+### 📚 Libraries Used
 
-Works on arbitrary PDFs
+- `pdfminer.six` — Font & layout extraction
+- Python 3.10
+- No external APIs or ML models
 
-Semantic filtering avoids noise, footers, copyrights
+---
 
+### 🔒 Notes
+
+- No hardcoded logic or file-specific tuning
+- Works on arbitrary PDFs
+- Semantic filtering avoids noise, footers, copyrights
